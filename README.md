@@ -1,6 +1,6 @@
-# Minecraft TOP typescript back-end
+# Typescript back-end
 
-The Minecraft TOP Backend server.
+The Typescript Backend server.
 
 # Pre-reqs
 To build and run this app locally you will need a few things:
