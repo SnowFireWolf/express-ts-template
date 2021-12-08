@@ -16,17 +16,16 @@ yarn install
 ```
 - Build and run the project
 ```
-yarn run build
+yarn build
 yarn start
 ```
 
 - Run in development mode
 
 ```
-yarn run dev
+yarn dev
 ```
 
 # To do list
 * [x] TypeScript + Express.js
 * [x] TSLint
-* [ ] Test
