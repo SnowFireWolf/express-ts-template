@@ -1,0 +1,50 @@
+{
+  "name": "ts-express-template",
+  "version": "0.0.1",
+  "description": "Express Typescript Backend Template",
+  "main": "./src/app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "build": "rmdir /s .\\dist && yarn build-ts && yarn copy-files",
+    "build-ts": "tsc",
+    "serve": "cross-env NODE_ENV=production node dist/server.js --prof",
+    "watch-node": "cross-env NODE_ENV=development nodemon dist/server.js",
+    "watch-ts": "tsc -w",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,aqua.bold\" \"yarn copy-files && yarn watch-ts\" \"yarn watch-node\"",
+    "start": "yarn serve",
+    "copy-files": "copyfiles -u 1 **/*.pug **/*.css dist/"
+  },
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "puppeteer": "^10.2.0",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.6.5",
+    "sequelize-typescript": "^2.1.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/pug": "^2.0.5",
+    "@types/validator": "^13.6.3",
+    "@types/winston": "^2.4.4",
+    "concurrently": "^4.1.0",
+    "copyfiles": "^2.4.1",
+    "dotenv": "^10.0.0",
+    "nodemon": "^1.19.1",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  }
+}
