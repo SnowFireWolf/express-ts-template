@@ -1,7 +1,8 @@
 import app from './app';
 import logger from './lib/logger';
-// import { sequelize } from './models';
 import * as middleware from './middleware/index';
+
+
 
 // 404 not found
 app.use(middleware.notFoundMiddleware);
@@ -10,10 +11,6 @@ app.use(middleware.notFoundMiddleware);
 app.use(middleware.internalErrorMiddleware);
 
 
-// sequelize.sync({force: false})
-// .then(() => {
-//   logger.info('database connect is successed.');
-// });
 
 const server = app.listen(app.get('port'), async () => {
 
@@ -21,5 +18,7 @@ const server = app.listen(app.get('port'), async () => {
 
   logger.info('Press CTRL-C to stop\n');
 });
+
+
 
 export default server;
