@@ -6,7 +6,7 @@ The Typescript Backend server.
 To build and run this app locally you will need a few things:
 - Install [Node.js](https://nodejs.org/en/)
 - Install [VS Code](https://code.visualstudio.com/)
-- Install [Typescript] (https://www.typescriptlang.org/index.html#download-links)
+- Install [Typescript](https://www.typescriptlang.org/index.html#download-links)
 
 # Getting started
 - Install dependencies
